@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gugudan(){
+            m = parseInt(n);
+            if(isNaN(m)||m<1||m>9){
+                alert("생각해보고 입력하셈");//경고창
+                return;//헛짓 했으니 탈출쓰
+            }
+            for(i=1; i<10; i ++){
+                document.writeln(m + " * " + i + "= " + (m*i) + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>구구단</h3><hr>
+    <script>
+        n = prompt("구구단 몇 단을 원함?","5");
+        gugudan(n);
+
+    </script>
+</body>
+</html>

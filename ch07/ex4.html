@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String 객체 사용하기</h3><hr>
+    <script>
+        var a = new String("Boys and Girls");
+        var b = "!!";
+        document.writeln(a.charAt(5));
+        document.writeln("<br>");
+        document.writeln(a.concat(b,"입니다"));
+        document.writeln("<br>");
+        document.writeln(a.concat(b));
+        document.writeln(a.concat(b,"a","bb","cc")+"<br>");
+        document.writeln(a.indexOf('s')+"<br>");//위치값
+        document.writeln(a.lastIndexOf('s')+"<br>");
+        document.writeln(a.slice(5,8)+"<br>");//위치단어 추출
+        document.writeln(a.toUpperCase()+"<br>");
+        document.writeln(a.replace("and","or")+"<br>");
+        document.writeln("   simba   ".trim()+"<br>");
+        var sub = a.split(" ");//빈칸을 구분자로 분리
+        for(i=0; i<sub.length; i++){
+            document.writeln(sub[i]+"<br>");
+        }
+        document.writeln("<hr>");
+        var s ="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=421&aid=0004515570"
+        /*
+        mode
+        mid
+        sid1
+        oid...
+        ----------
+        LSD
+        
+        */
+
+        var s1 = s.slice(s.indexOf("?")+1);
+        var s2 = s1.split("&");
+        for(i=0; i<s2.length; i++){
+            var s3 = s2[i].split('=');
+            document.writeln(s3[0]+"<br>");
+        }
+        for(i=0; i<s2.length; i++){
+            //var s3 = s2[i].split('=');
+            document.writeln(s2[i].split("=")[1]+"<br>");
+        }
+    </script>
+</body>
+</html>

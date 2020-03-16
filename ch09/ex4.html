@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function query(){
+            ret = confirm("유튭으로 고고싱?");
+            return ret;//값은 t ot f
+        }
+        function noAction(e){
+            e.preventDefault; // 이벤트 강제취소
+
+        }
+    </script>
+</head>
+<body>
+     <h3>이벤트의 디폴트 행동 취소</h3><hr>
+     <a href="http://youtube.com" onclick="return query()">유튭</a>
+     <form>
+         <input type="checkbox">닭가슴살<br>
+         <input type="checkbox" onclick="noAction(event)" >고구마<br>
+     </form>
+</body>
+</html>

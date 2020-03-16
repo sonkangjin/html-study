@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function load(url){
+            //window = new window(); 내부적으로는 윈도우 객체가 만들어져 있음
+            window.open(url,"myWin","left=300,top=300,width=400,height=300");
+
+        }
+    </script>
+</head>
+<body>
+    <h3>window.open()으로 새창열기</h3><hr>
+    <a href="javascript:load('http://naver.com')">NAVER</a><br>
+    <a href="javascript:load('http://kr.noxinfluencer.com/')">유튜브 수입계산</a><br>
+    <a href="javascript:load('http://hypeauditor.com/top-instagram')">인스타순위</a><br>
+</body>
+</html>

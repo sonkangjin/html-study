@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function over(obj){
+            obj.src="media(1)/banana.png";
+        }
+        function out(obj){
+            obj.src="media(1)/apple.png";
+        }
+    </script>
+    <script src="ex1.js"></script>
+</head>
+<body>
+    <h3>자바스크립트 동작 위치</h3>
+    <!-- this : 내 자신을 가르키는 예약어-->
+    <img src="media(1)/apple.png" 
+         onmouseover="this.src='media(1)/banana.png'" 
+         onmouseout="this.src='media(1)/apple.png'"><hr>
+
+    <img src="media(1)/apple.png"
+         onmouseover="over(this)"
+         onmouseout="out(this)"><hr>
+
+    <img src="media(1)/apple.png"
+         onmouseover="over2(this)"
+         onmouseout="out2(this)">
+</body>
+</html>
